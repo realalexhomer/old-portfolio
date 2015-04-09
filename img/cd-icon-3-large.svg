@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 420 325" enable-background="new 0 0 420 325" xml:space="preserve">
+<defs>
+	<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="-72" y="-52" width="590" height="471">
+		<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+		<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
+	</filter>
+</defs>
+<mask maskUnits="userSpaceOnUse" x="-72" y="-52" width="590" height="471" id="SVGID_1_">
+	<g filter="url(#Adobe_OpacityMaskFilter)">
+		<g>
+			<path d="M409.1,63.6V5.7c0-3.2-2.5-5.7-5.7-5.7h-387c-3.1,0-5.6,2.6-5.6,5.7v74.7c0,0.4,0,0.8,0.1,1.2V325h398.2L409.1,63.6
+				L409.1,63.6z M394.9,310.7H25.2V86.1h369.7V310.7z M172.8,236.7l-75.2-38.7v-8.8l75.2-38.7v11.2l-63.4,31.8v0.3l63.4,31.8V236.7z
+				 M323,198.1l-75.2,38.6v-11.2l63.9-31.8v-0.3l-63.9-31.8v-11.2L323,189L323,198.1L323,198.1z M188.4,263.5h-12.5L228,128.3h12.7
+				L188.4,263.5z"/>
+		</g>
+	</g>
+</mask>
+<polygon mask="url(#SVGID_1_)" fill="#EEF3F5" points="518,419 -72,387 -59,-47 466,-52 "/>
+</svg>

@@ -1,0 +1,338 @@
+@import '../bourbon/bourbon'; // http://bourbon.io/
+
+@import 'partials/variables'; // colors, fonts etc...
+
+@import 'partials/mixins'; // custom mixins
+
+@import 'partials/layout'; // responsive grid and media queries
+
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+
+html * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+	@include box-sizing(border-box);
+}
+
+body {
+	font: {
+		size: 100%;
+		family: $primary-font; // variables inside partials > _variables.scss
+	}
+	color: $color-2;
+	background-color: $color-1;
+}
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+
+.cd-container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+	width: 90%;
+	max-width: $L; 
+	margin: 0 auto;
+
+	&::after { /* clearfix */
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+
+html, body {
+	height: 100%;
+}
+
+@include MQ(L) {
+	body.new-color-1::before {
+		background-color: $color-4;
+	}
+
+	body.new-color-2::before {
+		background-color: $color-5;
+	}
+
+	body.new-color-3::before {
+		background-color: $color-6;
+	}
+}
+
+nav {
+	background-color: $color-1;
+	/*text-align: right;*/
+	width: 100%;
+	text-align: right;
+
+	.icon-wrapper {
+		max-width: $L;
+		text-align: right;
+		margin-right: 100px;
+	}
+}
+
+body::before, body::after {
+	/* the 2 underneath colored sections */
+	content: '';
+	position: fixed;
+	/* trick to remove some annoying flickering on webkit browsers */
+	width: 89.8%;
+	max-width: $L;
+	@include center(x);
+	height: 50%;
+	z-index: -1;
+}
+
+body::before {
+	top: 0;
+	background-color: $color-3;
+	@include transition(all .8s);
+}
+
+body::after {
+	top: 50%;
+	background-color: $color-2;
+}
+
+header {
+	position: relative;
+	height: 50%;
+	min-height: 480px;
+	background-color: $color-1;
+	z-index: 2;
+
+	.header-wrapper {
+		position: absolute;
+		@include center;
+		width: 90%;
+		max-width: $M - 60;
+		text-align: left;
+
+		.underline {
+			text-decoration: underline;
+		}
+	}
+
+	h1 {
+		@include MQ(L) {
+			@include font-size(90px);
+		}
+
+		@includeMQ(M) {
+			@include font-size(90px);
+		}
+
+		a {
+			color: inherit;
+		}
+
+		color: $color-7;
+		@include font-size(70px);
+		font-weight: bold;
+
+		&.inline {
+			display: inline;
+			text-decoration: inherit;
+		}
+
+		&.color-two {
+			color: $color-8;
+		}
+
+		&.color-three {
+			color: $color-9;
+		}
+
+		&.color-four {
+			color: $color-10;
+		}
+	}
+
+	p {
+		display: inline;
+	}
+
+}
+
+.cd-service {
+	position: relative;
+	z-index: 2;
+	min-height: $icon-small-height;
+	margin-left: $icon-small-width;
+	background-color: $color-1;
+	padding: 1em 1em 4em;
+
+	&::before, &::after {
+		content: '';
+		position: absolute;
+		width: $icon-small-width;
+		right: 100%;
+		z-index: 2;
+	}
+	
+	&::before {
+		top: 0;
+		height: $icon-small-height;
+		background-repeat: no-repeat;
+	}
+
+	&::after {
+		top: $icon-small-height;
+		bottom: 0;
+		background-image: url('../img/cd-pattern-small.svg');
+		background-repeat: repeat-y;
+	}
+
+	&.cd-service-divider::after {
+		top: 0;
+	}
+
+	&.cd-service-divider:last-child {
+		display: none;
+	}
+
+	&.cd-service-1::before {
+		background-image: url('../img/cd-icon-1-large-alt.svg');
+		border-bottom: 7px solid $color-1;
+	}
+
+	&.cd-service-2::before {
+		background-image: url('../img/cd-icon-1-small.svg');
+	}
+
+	&.cd-service-3::before {
+		background-image: url('../img/cd-icon-3-large-alt.svg');
+		border-bottom: 7px solid $color-1;
+	}
+	
+	&.cd-service-4::before {
+		background-image: url('../img/cd-icon-4-large-alt.svg');
+		border-bottom: 7px solid $color-1;
+	}
+
+	&.cd-service-5:before {
+		background-image: url('../img/cd-icon-5-large.svg');
+		border-bottom: 7px solid $color-1;
+	}
+
+
+	h2 {
+		text-transform: uppercase;
+		color: $color-7;
+		font-weight: bold;
+		margin-bottom: 1em;
+		font-family: $secondary-font;
+	}
+
+	p {
+		@include font-size(18px);
+		line-height: 1.4;
+		color: rgba($color-7, .5);
+
+		a {
+			color: inherit;
+			text-decoration: underline;
+		}
+	}
+
+	@include MQ(L) {
+		min-height: $icon-large-height + 200px;
+		margin-left: $icon-large-width;
+		padding: 6em 2em;
+
+		&::before, &::after {
+			width: $icon-large-width;
+		}
+
+		&::before {
+			height: $icon-large-height;
+		}
+
+		&::after {
+			top: $icon-large-height;
+			background-image: url('../img/cd-pattern-large.svg');
+		}
+
+		&.cd-service-divider:first-child, &.cd-service-divider:last-child {
+			min-height: 50px;
+			padding: 0;
+		}
+
+		&.cd-service-divider:last-child {
+			display: block;
+		}
+
+		&.cd-service-1::before {
+			background-image: url('../img/cd-icon-1-large-alt.svg');
+			border: none;
+		}
+
+		&.cd-service-2::before {
+			background-image: url('../img/cd-icon-2-large-alt.svg');
+			border: none;
+		}
+
+		&.cd-service-3::before {
+			background-image: url('../img/cd-icon-3-large-alt.svg');
+			border: none;
+		}
+		
+		&.cd-service-4::before {
+			background-image: url('../img/cd-icon-4-large-alt.svg');
+			border: none;
+		}
+
+		&.cd-service-5::before {
+			background-image: url('../img/cd-icon-5-large.svg');
+			border: none;
+		}
+
+		h2, p {
+			color: $color-2;
+			@include transition(color, .5s);
+
+			.underline {
+				text-decoration: underline;
+			}
+		}
+
+		h2 {
+			@include font-size(50px);
+		}
+
+		p {
+			@include font-size(25px);
+			line-height: 1.4;
+		}
+
+		&.focus h2 {
+			color: $color-7;
+		}
+
+		&.focus p {
+			/*color: rgba($color-7, .5);*/
+			color: $color-7;
+		}
+	}
+}
+
+footer {
+	position: relative;
+	height: 50%;
+	background: $color-2;
+	z-index: 2;
+}
