@@ -1,16 +1,9 @@
-@import '../bourbon/bourbon'; // http://bourbon.io/
+@import '../bourbon/bourbon';
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/layout';
 
-@import 'partials/variables'; // colors, fonts etc...
-
-@import 'partials/mixins'; // custom mixins
-
-@import 'partials/layout'; // responsive grid and media queries
-
-/* -------------------------------- 
-
-Primary style
-
--------------------------------- */
+//--
 
 html * {
 	-webkit-font-smoothing: antialiased;
@@ -24,35 +17,23 @@ html * {
 body {
 	font: {
 		size: 100%;
-		family: $primary-font; // variables inside partials > _variables.scss
+		family: $primary-font;
 	}
 	color: $color-2;
 	background-color: $color-1;
 }
 
-/* -------------------------------- 
-
-Modules - reusable parts of our design
-
--------------------------------- */
-
-.cd-container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+.cd-container {
 	width: 90%;
 	max-width: $L; 
 	margin: 0 auto;
 
-	&::after { /* clearfix */
+	&::after {
 		content: '';
 		display: table;
 		clear: both;
 	}
 }
-
-/* -------------------------------- 
-
-Main components 
-
--------------------------------- */
 
 html, body {
 	height: 100%;
@@ -74,7 +55,6 @@ html, body {
 
 nav {
 	background-color: $color-1;
-	/*text-align: right;*/
 	width: 100%;
 	text-align: right;
 
@@ -86,7 +66,6 @@ nav {
 }
 
 body::before, body::after {
-	/* the 2 underneath colored sections */
 	content: '';
 	position: fixed;
 	/* trick to remove some annoying flickering on webkit browsers */
@@ -325,7 +304,6 @@ header {
 		}
 
 		&.focus p {
-			/*color: rgba($color-7, .5);*/
 			color: $color-7;
 		}
 	}
