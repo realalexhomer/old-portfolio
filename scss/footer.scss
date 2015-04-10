@@ -1,0 +1,49 @@
+@import '../bourbon/bourbon'; // http://bourbon.io/
+
+@import 'partials/variables'; // colors, fonts etc...
+
+@import 'partials/mixins'; // custom mixins
+
+@import 'partials/layout'; // responsive grid and media queries
+
+// ----
+
+
+footer {
+  position: relative;
+  height: 50%;
+  background: $color-2;
+  z-index: 2;
+  color: $color-7;
+  min-height: 300px;
+
+  .footer-container {
+    // display: table;  
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 100%;
+
+    p {
+      @include vertical-align;
+      float: left;
+      max-width: 500px;
+      line-height: 200%;
+      // display: table-cell;
+      // vertical-align: middle;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      @include vertical-align;
+      max-height: 200px;
+      padding: 10px;
+      float: right;
+      border-radius: 25px;
+    }
+  }
+}
