@@ -1,13 +1,9 @@
-@import '../bourbon/bourbon'; // http://bourbon.io/
-
-@import 'partials/variables'; // colors, fonts etc...
-
-@import 'partials/mixins'; // custom mixins
-
-@import 'partials/layout'; // responsive grid and media queries
+@import '../bourbon/bourbon';
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/layout';
 
 // ----
-
 
 footer {
   position: relative;
@@ -18,7 +14,6 @@ footer {
   min-height: 300px;
 
   .footer-container {
-    // display: table;  
     max-width: 780px;
     margin-left: auto;
     margin-right: auto;
@@ -30,8 +25,6 @@ footer {
       float: left;
       max-width: 500px;
       line-height: 200%;
-      // display: table-cell;
-      // vertical-align: middle;
     }
 
     a {
