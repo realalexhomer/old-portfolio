@@ -150,7 +150,8 @@ header {
     border-bottom: 7px solid #eef3f5; }
   .cd-service.cd-service-2::before {
     background-image: url("../img/cd-icon-1-small.svg");
-    border-right: 2px solid #eef3f5; }
+    border-right: 1px solid #eef3f5;
+    border-bottom: 1px solid #eef3f5; }
   .cd-service.cd-service-3::before {
     background-image: url("../img/cd-icon-3-large-alt.svg");
     border-bottom: 7px solid #eef3f5; }

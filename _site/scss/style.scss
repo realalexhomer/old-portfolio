@@ -191,7 +191,8 @@ header {
 
 	&.cd-service-2::before {
 		background-image: url('../img/cd-icon-1-small.svg');
-		border-right: 2px solid $color-1;
+		border-right: 1px solid $color-1;
+		border-bottom: 1px solid $color-1;
 	}
 
 	&.cd-service-3::before {
