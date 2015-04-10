@@ -245,10 +245,4 @@ header {
         /*color: rgba($color-7, .5);*/
         color: #131c21; } }
 
-footer {
-  position: relative;
-  height: 50%;
-  background: #dee8ec;
-  z-index: 2; }
-
 /*# sourceMappingURL=style.css.map */
