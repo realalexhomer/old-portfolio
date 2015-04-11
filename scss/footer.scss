@@ -27,6 +27,12 @@ footer {
       line-height: 200%;
     }
 
+    #about-heading {
+      display: block;
+      @include font-size(20px);
+      text-decoration: underline;
+    }
+
     a {
       color: inherit;
     }

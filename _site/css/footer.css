@@ -20,6 +20,11 @@ footer {
       float: left;
       max-width: 500px;
       line-height: 200%; }
+    footer .footer-container #about-heading {
+      display: block;
+      font-size: 20px;
+      font-size: 1.25rem;
+      text-decoration: underline; }
     footer .footer-container a {
       color: inherit; }
     footer .footer-container img {
