@@ -4,16 +4,24 @@ permalink: /projects/
 title: Alex Homer Projects
 custom_css: projects
 ---
+<header>
+  <span class="header-wrapper">
+    <h1 class="color-one">Alex Homer</h1>
+<!--     <h1 class="color-three"> <a href="https://medium.com/@Alex__Homer" class="underline">Blogs </a>&&</h1>
+    <h1 class="color-two"><a href="/projects" class="underline">Portfolio</a> </span>&&</h1> -->
+    <h1 class="color-four">Portfolio:</h1>
+  </span>
+</header>
 
 <div class="projects-wrapper">
 
   <a href="/"><h2><< Back to main</h2></a>
 
-  {% assign posts = site.posts | sort:"order"  %}
+  {% assign posts = site.posts | sort:"order" %}
   
-  {% for post in posts | sort:"order" %}
+  {% for post in posts %}
     <div class="ind-project">
-      <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+      <a href="{{ post.url }}"><h3 class="title">{{ post.title }}</h3></a>
       <div class="project-tags">
         {% for tag in post.tags %}
           {{ tag }}

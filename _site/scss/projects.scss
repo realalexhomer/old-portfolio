@@ -3,6 +3,66 @@
 @import 'partials/mixins';
 @import 'partials/layout';
 
+header {
+  position: relative;
+  margin-top: 150px;
+  height: 20%;
+  min-height: 200px;
+  background-color: $color-1;
+  z-index: 2;
+
+  .header-wrapper {
+    position: absolute;
+    @include center;
+    width: 90%;
+    max-width: $M - 60;
+    text-align: left;
+
+    .underline {
+      text-decoration: underline;
+    }
+  }
+
+  h1 {
+    @include MQ(L) {
+      @include font-size(90px);
+    }
+
+    @includeMQ(M) {
+      @include font-size(90px);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    color: $color-7;
+    @include font-size(70px);
+    font-weight: bold;
+
+    &.inline {
+      display: inline;
+      text-decoration: inherit;
+    }
+
+    &.color-two {
+      color: $color-8;
+    }
+
+    &.color-three {
+      color: $color-9;
+    }
+
+    &.color-four {
+      color: $color-10;
+    }
+  }
+
+  p {
+    display: inline;
+  }
+}
+
 .projects-wrapper {
   margin-top: 20px;
   display: block;
@@ -36,4 +96,15 @@
 
 .ind-project {
   color: $color-7;
+  height: 400px;
+
+  h3 {
+    float: right;
+    text-align: center;
+  }
+
+  img {
+    float: left;
+  }
+
 }
