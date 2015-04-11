@@ -6,8 +6,23 @@ custom_css: projects
 ---
 
 <div class="projects-wrapper">
+
   <a href="/"><h2><< Back to main</h2></a>
 
-  <h1 style="text-align: center; font-family: arial; margin-top: 50px; color: black; font-size: 60px;">Coming soon! In the mean time, check out my <a style="color: inherit; text-decoration: underline;" href="https://www.github.com/realalexhomer">Github</a> or my <a style="color: inherit; text-decoration: underline;" href="../resume/resume.pdf">resume</a></h1>
+  {% assign posts = site.posts | sort:"order"  %}
+  
+  {% for post in posts | sort:"order" %}
+    <div class="ind-project">
+      <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+      <div class="project-tags">
+        {% for tag in post.tags %}
+          {{ tag }}
+        {% endfor %}
+      </div>
+      {% if post.thumbnail %}
+        <img src="../img/thumbs/{{ post.thumbnail }}">
+      {% endif %}
+    </div>
+  {% endfor %}
 </div>
 
