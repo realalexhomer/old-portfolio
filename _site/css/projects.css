@@ -22,8 +22,35 @@
     color: #131c21;
     padding: 15px; }
 
-footer {
-  position: absolute;
-  width: 100%; }
+.ind-project {
+  color: #131c21;
+  height: 400px; }
+  .ind-project.text {
+    float: right;
+    max-width: 50%;
+    padding: 10px; }
+    .ind-project.text h3 {
+      font-size: 45px;
+      font-size: 2.8125rem;
+      text-align: left; }
+    .ind-project.text .project-description {
+      height: 170px;
+      line-height: 200%;
+      padding-top: 10px; }
+  .ind-project img {
+    float: left;
+    max-width: 45%;
+    border-radius: 25px; }
 
-/*# sourceMappingURL=projects.css.map */
+button {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative; }

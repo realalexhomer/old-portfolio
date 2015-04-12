@@ -4,10 +4,42 @@ permalink: /projects/
 title: Alex Homer Projects
 custom_css: projects
 ---
+<header>
+  <span class="header-wrapper">
+    <h1 class="color-one">Alex Homer</h1>
+    <h1 class="color-three"> <a href="/" class="underline">Story </a>&&</h1>
+    <h1 class="color-two"><a href="https://medium.com/@Alex__Homer"  class="underline">Blogs</a> </span>&&</h1>
+    <h1 class="color-four">Portfolio:</h1>
+  </span>
+</header>
 
 <div class="projects-wrapper">
-  <a href="/"><h2><< Back to main</h2></a>
 
-  <h1 style="text-align: center; font-family: arial; margin-top: 50px; color: black; font-size: 60px;">Coming soon! In the mean time, check out my <a style="color: inherit; text-decoration: underline;" href="https://www.github.com/realalexhomer">Github</a> or my <a style="color: inherit; text-decoration: underline;" href="../resume/resume.pdf">resume</a></h1>
+  {% assign posts = site.posts | sort:"order" %}
+  
+  {% for post in posts %}
+    <div class="ind-project">
+      <div class="ind-project text">
+        <a href="{{ post.url }}">
+          <h3 class="title">
+            {{ post.title }}
+          </h3>
+        </a>
+        <p class="project-description">
+          {{ post.description}}
+        </p>
+        <div class="project-tags">
+          {% for tag in post.tags %}
+            <button>{{ tag }}</button>
+          {% endfor %}
+        </div>
+      </div>
+      {% if post.thumbnail %}
+        <a href="{{ post.outside-url }}">
+          <img src="../img/thumbs/{{ post.thumbnail }}">
+        </a>
+      {% endif %}
+    </div>
+  {% endfor %}
 </div>
 
