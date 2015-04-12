@@ -19,6 +19,11 @@ custom_css: projects
   
   {% for post in posts %}
     <div class="ind-project">
+      {% if post.thumbnail %}
+        <a href="{{ post.outside-url }}">
+          <img src="../img/thumbs/{{ post.thumbnail }}">
+        </a>
+      {% endif %}
       <div class="ind-project text">
         <a href="{{ post.url }}">
           <h3 class="title">
@@ -34,11 +39,6 @@ custom_css: projects
           {% endfor %}
         </div>
       </div>
-      {% if post.thumbnail %}
-        <a href="{{ post.outside-url }}">
-          <img src="../img/thumbs/{{ post.thumbnail }}">
-        </a>
-      {% endif %}
     </div>
   {% endfor %}
 </div>
