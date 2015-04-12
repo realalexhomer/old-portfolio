@@ -27,7 +27,7 @@
   a {
     color: inherit;
     text-decoration: none;
-  }
+  } 
 
   h2 {
     @include font-size(40px);
@@ -38,33 +38,55 @@
 
 .ind-project {
   color: $color-7;
-  height: 400px;
 
   &.text {
-    float: right;
-    max-width: 50%;
     padding: 10px;
 
     h3 {
-      @include font-size(45px);
-      // font-weight: bold;
-
-      text-align: left;
+      @include font-size(30px);
     }
 
     .project-description {
-      height: 170px;
       line-height: 200%;
       padding-top: 10px;
     }
   }
 
   img {
-    float: left;
-    max-width: 45%;
+    padding: 10px;
     border-radius: 25px;
+    max-width: 100%;
   }
+}
 
+@include MQ(L){
+  .ind-project {
+    color: $color-7;
+    height: 400px;
+
+    &.text {
+      float: right;
+      max-width: 50%;
+      padding: 10px;
+
+      h3 {
+        @include font-size(45px);
+        // font-weight: bold;
+
+        text-align: left;
+      }
+
+      .project-description {
+        height: 170px;
+      }
+    }
+
+    img {
+      float: left;
+      max-width: 45%;
+    }
+
+  }
 }
 
 button {

@@ -15,38 +15,64 @@ footer {
   background: $color-2;
   z-index: 2;
   color: $color-7;
-  min-height: 300px;
+
+  a {
+    color: inherit;
+  }
 
   .footer-container {
-    max-width: 780px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     height: 100%;
 
-    p {
-      @include vertical-align;
-      float: left;
-      max-width: 500px;
-      line-height: 200%;
-    }
-
     #about-heading {
-      display: block;
-      @include font-size(20px);
+      display: none;
       text-decoration: underline;
     }
 
-    a {
-      color: inherit;
+    p {
+      line-height: 200%;
+      padding: 10px;
     }
 
     img {
-      @include vertical-align;
-      max-height: 200px;
-      padding: 10px;
-      float: right;
       border-radius: 25px;
+      padding: 10px;
+    }
+  }
+}
+
+@include MQ(L){
+  footer {
+    min-height: 300px;
+
+    .footer-container {
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      height: 100%;
+
+      p {
+        @include vertical-align;
+        float: left;
+        max-width: 500px;
+        line-height: 200%;
+      }
+
+      img {
+        @include vertical-align;
+        max-height: 200px;
+        padding: 10px;
+        float: right;
+        border-radius: 25px;
+      }
+
+      #about-heading {
+        display: block;
+        @include font-size(20px);
+      }
     }
   }
 }
